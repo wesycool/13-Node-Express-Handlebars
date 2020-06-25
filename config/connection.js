@@ -1,6 +1,5 @@
 require('dotenv').config()
 const mysql = require("mysql");
-const PORT = process.env.PORT || 3000;
 
 // Database Class
 class Database {
@@ -29,11 +28,16 @@ class Database {
   
 
 // Access SQL Database
-const db = new Database({
-    host: "localhost",
-    port: PORT,
-    user: process.env.DB_USER,
-    password: process.env.DB_PWD,
-    database: process.env.DB_NAME,
-    insecureAuth : true
-});
+function getDatabase(){
+    new Database({
+        host: "localhost",
+        port: 3306,
+        user: process.env.DB_USER,
+        password: process.env.DB_PWD,
+        database: process.env.DB_NAME,
+        insecureAuth : true
+    });
+}
+
+
+module.exports = {getDatabase}
