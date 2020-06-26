@@ -1,0 +1,39 @@
+main{
+    background: url('../img/burger.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar{
+    position: sticky !important;
+    top: 0;
+}
+
+p{
+    text-align: center;
+}
+
+.bg-dark{
+    color:white;
+}
+
+#data-field{
+    background: rgba(255, 255, 255, 0.4);
+    height: 100vh;
+}
+
+#mobile-img{
+    padding: 0px;
+    display: none;
+}
+
+@media screen and (max-device-width: 480px){
+    #mobile-img{
+        display: inline;
+    } 
+
+    #data-field{
+        height:100%;
+    }
+}
