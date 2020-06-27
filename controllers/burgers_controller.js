@@ -1,7 +1,14 @@
-require('express')
-require('../models/burger.js')
+const express = require('express')
+const burger = require('../models/burger.js')
 
-function router()
+const router = express.Router();
+
+// GET '/' - Render data at startup
+router.get('/',async function(req,res){
+    const burgerList = await burger.selectAll(false)
+    const devouredList = await burger.selectAll(true)
+    res.render('index', {burgerList,devouredList})
+})
 
 
-module.exports = {router}
+module.exports = router

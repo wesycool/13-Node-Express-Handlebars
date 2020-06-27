@@ -1,6 +1,6 @@
 <nav class='navbar navbar-expand-lg navbar-light bg-dark'>
     <div class="container-fluid nav-align">
-        <p><h1>{{test}}</h1></p>
+        <p><h1><i class="fas fa-hamburger"></i> Welcome to Eat-Da-Burger</h1></p>
     </div>
 </nav>
 <main>
@@ -9,7 +9,26 @@
     </div>
 
     <div class='container-xl' id='data-field'>
-        
-        
+        <div class='row'>
+            <div class='col col-xl-6'>
+                <h2>Burger List</h2>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Add Your Burger" aria-label="Add Your Burger" aria-describedby="burgerBtn">
+                    <button class="btn btn-outline-secondary" type="button" id="burgerBtn">Add</button>
+                </div>
+                <ul>
+                    {{#each burgerList}}
+                    <li>{{burger_name}}</li>
+                    {{/each}}
+                </ul>
+                
+                <h2>Devoured</h2>
+                <ul>
+                    {{#each devouredList}}
+                    <li>{{burger_name}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
     </div>
 </main>

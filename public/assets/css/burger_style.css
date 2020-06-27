@@ -20,7 +20,7 @@ p{
 
 #data-field{
     background: rgba(255, 255, 255, 0.4);
-    height: 100vh;
+    height: calc(100vh - 4.5rem);
 }
 
 #mobile-img{
@@ -29,11 +29,10 @@ p{
 }
 
 @media screen and (max-device-width: 480px){
+    main{
+        background: url('')
+    }
     #mobile-img{
         display: inline;
     } 
-
-    #data-field{
-        height:100%;
-    }
 }

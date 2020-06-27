@@ -10,8 +10,10 @@ USE burgers_db;
 --      **id**: an auto incrementing int that serves as the primary key.
 --      **burger_name**: a string.
 --      **devoured**: a boolean.
+--      **createAt**: timestamp.
 CREATE TABLE burgers(
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
     burger_name VARCHAR(255),
-    devoured BOOLEAN
+    devoured BOOLEAN,
+    createAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );

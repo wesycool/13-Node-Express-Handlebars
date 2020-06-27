@@ -1,5 +1,6 @@
 const express = require('express')
 const exphbs = require("express-handlebars");
+const routes = require('./controllers/burgers_controller.js')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -7,29 +8,11 @@ const PORT = process.env.PORT || 3000;
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static('public'))
-
-app.get('/',function(req,res){
-  const test = 'Welcome to Eat-Da-Burger'
-  res.render('index', {test:test})
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.use(express.json());
+app.use(routes);
 
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
-  });
+});

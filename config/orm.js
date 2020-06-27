@@ -1,9 +1,12 @@
-require('./config/connection.js')
+const connection = require('./connection.js')
 
-function selectAll()
-function insertOne()
-function updateOne()
-
-module.exports = {
-    selectAll, insertOne, updateOne
+const orm = {
+    selectAll: (tableInput,devoured) => {
+        const result = connection.query("SELECT * FROM ?? WHERE devoured = ?", [tableInput, devoured])
+        return result
+    },
+    insertOne: () => {''},
+    updateOne: () => {''}
 }
+
+module.exports = orm
