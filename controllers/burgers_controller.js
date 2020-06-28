@@ -10,9 +10,14 @@ router.get('/', async function(req,res){
     res.render('index', {burgerList,devouredList})
 })
 
-// POST '/api/ - Insert data into SQL
-router.post('/api/:data', async function(req,res){
+// POST '/api/add/:data - Insert data into SQL
+router.post('/api/add/:data', async function(req,res){
     await burger.insertOne(req.params.data)
+})
+
+// POST '/api/devour/:data - Update data into SQL
+router.put('/api/devour/:id', async function(req,res){
+    await burger.updateOne(req.params.id)
 })
 
 module.exports = router

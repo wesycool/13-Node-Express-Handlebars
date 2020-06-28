@@ -8,7 +8,9 @@ const orm = {
     insertOne: (tableInput,addBurger) => {
         connection.query("INSERT INTO ?? VALUES(?, DEFAULT)", [tableInput, addBurger])
     },
-    updateOne: () => {''}
+    updateOne: (tableInput, devoured, updateBurger) => {
+        connection.query("UPDATE ?? SET devoured=? WHERE id=?", [tableInput, devoured ,updateBurger])
+    }
 }
 
 module.exports = orm

@@ -14,11 +14,13 @@
                 <h2>Burger List</h2>
                 <form class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Add Your Burger" aria-label="Add Your Burger" aria-describedby="burgerBtn">
-                    <button class="btn btn-outline-secondary" type="submit" id="burgerBtn" onclick="addBurger(event)">Add</button>
+                    <button class="btn btn-secondary" type="submit" id="burgerBtn" onclick="addBurger(event)">Add</button>
                 </form>
                 <ul>
                     {{#each burgerList}}
-                    <li>{{burger_name}}</li>
+                    <li><form>
+                        <p>{{burger_name}} <input class="btn btn-outline-warning btn-sm" type="submit" value='Devour' id={{id}} onclick="devourBurger(event)"></p>
+                    </form></li>
                     {{/each}}
                 </ul>
                 
