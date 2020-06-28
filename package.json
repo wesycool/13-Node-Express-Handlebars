@@ -24,5 +24,5 @@
     "mysql": "^2.18.1"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "An app that allows you to add burgers of your choices and devour it. Data is collected and stored in an SQL database. The project uses MVC framework."
 }

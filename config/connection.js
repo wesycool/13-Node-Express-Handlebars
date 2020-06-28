@@ -25,18 +25,19 @@ class Database {
         } );
     }
   }
-  
 
-// Access SQL Database
-const connection = new Database({
+// Localhost Info
+const localhost = {
     host: "localhost",
     port: 3306,
     user: process.env.DB_USER,
     password: process.env.DB_PWD,
     database: process.env.DB_NAME,
     insecureAuth : true
-});
+}
 
+// Access SQL Database
+const connection = new Database(process.env.JAWSDB_URL || localhost);
 
 
 module.exports = connection
