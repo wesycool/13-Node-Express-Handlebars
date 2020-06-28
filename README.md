@@ -11,9 +11,11 @@ An app that allows you to add burgers of your choices and devour it. Data is col
 Node.js, mySQL Workbench, npm install express, express-handlebars and mysql.
 
 ## Usage
-Run mysql schema.sql and seeds.sql files to create database. Run node server.js to run the app.
+Run mysql schema.sql and seeds.sql files to create database.
+Run node server.js to run the app.
+Sample link: https://wesycool-eat-da-burger.herokuapp.com/
 
-[![Screenshot](./screenshot.png)]
+[![Screenshot](./screenshot.png)](https://wesycool-eat-da-burger.herokuapp.com/)
 
 ## License
 MIT License
